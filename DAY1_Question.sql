@@ -56,19 +56,11 @@ ORDER BY
 SELECT 
 	*
 FROM
-	tbl_category
+	tbl_menu
+
 WHERE
 	category_name NOT LIKE '%기타%' AND
 	category_name NOT LIKE '%쥬스%' AND
 	category_name NOT LIKE '%커피%' AND
-	menu_name = 13000
-ORDER BY
+	menu_price = 13000 AND
 	orderable_status <> 'N';
-
-
-
-
-
-
-
-
