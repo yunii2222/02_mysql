@@ -69,6 +69,21 @@ WHERE
 -- CTE (Common Table Expressions)
 -- 파생 테이블과 비슷한 개념으로 코드의 가독성 및 재사용성을 위해 파생 테이블 대신 사용한다.
 -- FROM 절(JOIN 절)에서만 사용 된다.
-
+WITH menucate AS (
+	SELECT
+		menu_name,
+		category_name
+	FROM
+		tbl_menu a
+	JOIN 
+		tbl_category b ON a.category_code = b.category_code
+	)
+    SELECT
+		*
+	FROM
+		menucate
+	ORDER BY
+		menu_name;
+        
 
 

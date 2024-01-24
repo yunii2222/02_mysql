@@ -195,6 +195,24 @@ WHERE
 	category_code NOT IN (4,5,6)
 ORDER BY
 	category_code;
+    
+-- -------------------------------------------
+
+-- (7) IS NULL연산자    
+SELECT
+	*
+FROM
+	tbl_category
+WHERE
+	ref_category_code IS NULL;
+
+-- 부정 연산자 NOT과 함께 사용
+SELECT
+	*
+FROM
+	tbl_category
+WHERE
+	ref_category_code IS NOT NULL;
 
 
 

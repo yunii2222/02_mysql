@@ -24,3 +24,14 @@ ORDER BY
 -- LIMIT [offset,] row_count
 -- offset : 시작할 행의 번호(인덱스 체계)
 -- roe_count : 이후 행 부터 반환 받을 행의 개수
+
+-- 상위 다섯 행만 조회
+SELECT
+	menu_code,
+    menu_name,
+    menu_price
+FROM
+	tbl_menu
+ORDER BY
+	menu_price DESC
+    LIMIT 5;

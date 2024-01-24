@@ -21,4 +21,11 @@ ORDER BY
 SELECT
 	DISTINCT ref_category_code
 FROM
-	tbl_menu
+	tbl_category;
+    
+-- 다중열 DISTINCT사용
+SELECT
+	DISTINCT category_code,
+    orderable_status
+FROM
+	tbl_menu;
