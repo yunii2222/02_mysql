@@ -1,14 +1,16 @@
-
--- 10. DML (데이터 조작 언어)
+ -- 10. DML (데이터 조작 언어)
 -- 테이블에 값을 삽입(INSERT), 수정(UPDATE), 삭제(DELETE) 
 
 -- 1. INSERT : 새로운 행을 추가하는 구문으로 테이블의 행의 수가 증가한다.
-INSERT INTO tbl_menu VALUES (NULL, '바나나해장국', 8500, 4, 'Y');
+INSERT INTO tbl_menu 
+VALUES 
+	(NULL, '바나나해장국', 8500, 4, 'Y');
 SELECT * FROM tbl_menu;
 
 -- NULL 허용 가능 컬럼 또는 auto_increment 설정 된 컬럼을 제외하고 INSERT 할 컬럼을 지정해서 INSERT 가능
 -- NULL값은 나눠져있음, 메뉴코드는 자동증가함
 
+-- 제한이 없음
 INSERT INTO
 -- 여기에 해당하는 값만 넣겠다.
 	tbl_menu (menu_name, menu_price, category_code, orderable_status)
@@ -31,7 +33,9 @@ VALUES
     
 SELECT * FROM tbl_menu;
 
--- UPDATE : 테이블에 기록 된 컬럼의 값을 수정하는 구문으로 행 개수의 변화는 없다.
+-- ------------------------------------------------------------------
+
+-- 2. UPDATE : 테이블에 기록 된 컬럼의 값을 수정하는 구문으로 행 개수의 변화는 없다.
 SELECT 
 	menu_code,
     category_code
@@ -67,6 +71,8 @@ WHERE
 					menu_name = '파인애플탕'
 				)
 			tmp);
+            
+-- ------------------------------------------------------------------
             
 -- 3. DELETE : 테이블의 행을 삭제하는 구문으로 테이블의 행의 갯수가 줄어든다.
 SELECT * FROM tbl_menu ORDER BY menu_price;
